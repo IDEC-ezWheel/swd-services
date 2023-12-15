@@ -14,8 +14,8 @@ Users should regularly inform themselves about updates of this driver (Activatin
 ## Prerequisites
 
 - SWD® drive
-- Ubuntu 22.04 jammy or
-- Ubuntu 20.04 focal
+- Ubuntu 22.04 jammy or Ubuntu 20.04 focal
+- dbus-x11
 - CAN bus communication established bewteen the PC and SWD®
 
 ## Linux debian package
@@ -23,7 +23,7 @@ Users should regularly inform themselves about updates of this driver (Activatin
 It is available for the following platforms:
 
 - *ARM 32-bits*, i.e. **armhf** debian packages (only for Ubuntu 20.04 focal)
-- *ARM 64-bits*, i.e. **arm64** debian packages, since version 3.3.1
+- *ARM 64-bits*, i.e. **arm64** debian packages, since version 0.2.6
 - *AMD 64-bits*, i.e. **amd64** debian packages, for x86 machines
 
 ## Installation
@@ -88,7 +88,11 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/ezw/usr/lib
 
 ## Examples
 
-### Script using ezw-smc-service
+### Code using ezw-smc-core c++ API
+
+The c++ code 'DiffDriveController.cpp' for [ROS](https://github.com/ezWheelSAS/swd_ros_controllers/blob/main/src/diff_drive_controller/DiffDriveController.cpp) and [ROS2](https://github.com/ezWheelSAS/swd_ros2_controllers/blob/main/src/diff_drive_controller/DiffDriveParameters.cpp), can be used to control a pair of SWD® drives, as a diffrential kinematic platform.
+
+### Code using ezw-smc-service python API
 
 The python 'remote' script can be used to control a SWD® drive:
 
@@ -98,12 +102,6 @@ The python 'remote' script can be used to control a SWD® drive:
 
 *Keyboard commands are listed at the end.*
 
-### Script using ezw-smc-core
-
-The c++ code 'DiffDriveController.cpp' can be used to control a pair of  SWD® drives as a diffrential kinematic platform.
-
-
-
 The python 'swd_xxxx_x_commissioning' scripts can be used to configure a SWD® drive:
 
 ```shell
@@ -112,3 +110,26 @@ swd_right_5_commissioning.py
 ```
 
 *Note that, if you are using SWD® diff_drive_controller you might have to stop it before commissioning SWD®.*
+
+## Troubleshooting
+
+#### Install dbus-x11
+
+```shell
+sudo apt install dbus-x11
+```
+
+#### Check that a can interface is mounted
+
+```shell
+ip link show
+```
+
+if there is no can interface, mount it.
+
+#### AttributeError: module 'attr' has no attribute 's'
+
+```shell
+pip install attr
+pip install attrs
+```
