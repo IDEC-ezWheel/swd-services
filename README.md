@@ -16,15 +16,15 @@ Users should regularly inform themselves about updates of this driver (Activatin
 - SWD® drive
 - Ubuntu 22.04 jammy or Ubuntu 20.04 focal
 - dbus-x11
-- CAN bus communication established bewteen the PC and SWD®
+- CAN bus communication established bewteen the IPC and the SWD® drive
 
 ## Linux debian package
 
 It is available for the following platforms:
 
-- *ARM 32-bits*, i.e. **armhf** debian packages (only for Ubuntu 20.04 focal)
-- *ARM 64-bits*, i.e. **arm64** debian packages, since version 0.2.6
-- *AMD 64-bits*, i.e. **amd64** debian packages, for x86 machines
+- *ARM 32-bits*, i.e. **armhf** debian packages (only for Ubuntu 20.04 focal), for ARM 32 bits machines
+- *ARM 64-bits*, i.e. **arm64** debian packages, for ARM 64 bits machines, since version 0.2.6
+- *AMD 64-bits*, i.e. **amd64** debian packages, for x86 64 bits machines
 
 ## Installation
 
@@ -54,7 +54,7 @@ Now, you should be able to install the package using apt:
 sudo apt update && sudo apt install swd-services
 ```
 
-The libraries are now installed in your linux environment in */opt/ezw/usr/*.
+The libraries are now installed in your linux environment in */opt/ezw/usr/* directory.
 
 ## Start using swd-services
 
@@ -68,14 +68,11 @@ sudo ip link set can0 txqueuelen 1000
 
 ### Configure D-Bus session (Optional if already one exists)
 
-```shell
-unset LD_LIBRARY_PATH 
-/usr/bin/dbus-launch > /tmp/SYSTEMCTL_dbus.id
-```
-
 ### Start ezw-smc-service
 
 ```shell
+unset LD_LIBRARY_PATH 
+/usr/bin/dbus-launch > /tmp/SYSTEMCTL_dbus.id
 export $(cat /tmp/SYS*.id) 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/ezw/usr/lib 
 /opt/ezw/usr/bin/ezw-smc-service /opt/ezw/usr/etc/ezw-smc-core/drive_config.ini
@@ -102,14 +99,14 @@ The python 'remote' script can be used to control a SWD® drive:
 
 *Keyboard commands are listed at the end.*
 
-The python 'swd_xxxx_x_commissioning' scripts can be used to configure a SWD® drive:
+The python 'swd_xxxx_x_commissioning' scripts can be used to [configure a SWD® drive](https://github.com/ezWheelSAS/swd-starter-kit-config):
 
 ```shell
 swd_left_4_commissioning.py
 swd_right_5_commissioning.py
 ```
 
-*Note that, if you are using SWD® diff_drive_controller you might have to stop it before commissioning SWD®.*
+*Note that, if you are using SWD® diff_drive_controller you might have to stop it before commissioning SWD® drives.*
 
 ## Troubleshooting
 
