@@ -1,5 +1,7 @@
 # ez-Wheel SWD® services
 
+APIs for managing SWD® (Safety Wheel Drive) drive
+
 ## Overview
 
 This repository provides the documentation of the APIs provided in the linux debian package **swd-services**.
@@ -7,9 +9,9 @@ These APIs can be used to control and configure the SWD® (Safety Wheel Drive) p
 
 | <img src="https://www.ez-wheel.com/storage/image-product/visuels-swd-core-2-0-0.png" width="45%"></img> | <img src="https://ez-wheel.com/storage/image-product/ezswd125im-31102023-photo-hd-det.png" width="50%"></img> | <img src="https://www.ez-wheel.com/storage/image-product/roue-electrique-swd-150-2-0-0-0.png" width="45%"></img>       |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| [SWD® Core](https://www.ez-wheel.com/en/safety-gear-motor) <br />Safety gear motor                      | [SWD® 125](https://ez-wheel.com/en/safety-wheel-drive-swd-125) <br /> Medium duty Safety Wheel Drive |[SWD® 150](https://www.ez-wheel.com/en/swd-150-safety-wheel-drive) <br /> Heavy duty Safety wheel drive                      | 
+| [SWD® Core](https://www.ez-wheel.com/en/safety-gear-motor) <br />Safety gear motor                      | [SWD® 125](https://ez-wheel.com/en/safety-wheel-drive-swd-125) <br /> Medium duty Safety Wheel Drive |[SWD® 150](https://www.ez-wheel.com/en/swd-150-safety-wheel-drive) <br /> Heavy duty Safety Wheel Drive                      | 
 
-Users should regularly inform themselves about updates of this driver (Activating GitHub notifications with "Watch", 'All activity' button on top of this page).
+Users should regularly inform themselves about updates of this driver (Activating GitHub notifications with 'Watch', 'All activity' button on top of this page).
 
 ## Prerequisites
 

@@ -12,11 +12,14 @@ sudo ip link set can0 txqueuelen 1000
 
 ### Configure D-Bus session (Optional if already one exists)
 
-### Start ezw-smc-service
-
 ```shell
 unset LD_LIBRARY_PATH 
 /usr/bin/dbus-launch > /tmp/SYSTEMCTL_dbus.id
+```
+
+### Start ezw-smc-service
+
+```shell
 export $(cat /tmp/SYS*.id) 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/ezw/usr/lib 
 /opt/ezw/usr/bin/ezw-smc-service /opt/ezw/usr/etc/ezw-smc-core/drive_config.ini
@@ -29,21 +32,21 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/ezw/usr/lib
 
 ## Examples
 
-### Code using ezw-smc-core c++ API
+### Code using ezw-smc-core C++ API
 
-The c++ code 'DiffDriveController.cpp' for [ROS](https://github.com/ezWheelSAS/swd_ros_controllers/blob/main/src/diff_drive_controller/DiffDriveController.cpp) and [ROS2](https://github.com/ezWheelSAS/swd_ros2_controllers/blob/main/src/diff_drive_controller/DiffDriveParameters.cpp), can be used to control a pair of SWD® drives, as a diffrential kinematic platform.
+The C++ code 'DiffDriveController.cpp' for [ROS](https://github.com/ezWheelSAS/swd_ros_controllers/blob/main/src/diff_drive_controller/DiffDriveController.cpp) and [ROS2](https://github.com/ezWheelSAS/swd_ros2_controllers/blob/main/src/diff_drive_controller/DiffDriveParameters.cpp), can be used to control a pair of SWD® drives, as a diffrential kinematic platform.
 
 ### Code using ezw-smc-service python API
 
-The python 'remote' script can be used to control a SWD® drive:
+The 'remote.py' python script can be used to control a SWD® drive:
 
 ```shell
 /opt/ezw/usr/sbin/remote.py smc_drive
 ```
 
-*Keyboard commands are listed at the end.*
+*NOTA: Keyboard commands are listed at the end.*
 
-The python 'swd_xxxx_x_commissioning' scripts can be used to [configure a SWD® drive](https://github.com/ezWheelSAS/swd-starter-kit-config):
+The 'swd_xxxx_x_commissioning.py' python scripts can be used to [configure a SWD® drive](https://github.com/ezWheelSAS/swd-starter-kit-config):
 
 ```shell
 swd_left_4_commissioning.py
