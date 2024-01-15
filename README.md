@@ -7,16 +7,17 @@ APIs for managing SWD® (Safety Wheel Drive) drive
 This repository provides the documentation of the APIs provided in the linux debian package **swd-services**.
 These APIs can be used to control and configure the SWD® (Safety Wheel Drive) powered by [ez-Wheel](https://www.ez-wheel.com).
 
-| <img src="https://www.ez-wheel.com/storage/image-product/visuels-swd-core-2-0-0.png" width="45%"></img> | <img src="https://ez-wheel.com/storage/image-product/ezswd125im-31102023-photo-hd-det.png" width="50%"></img> | <img src="https://www.ez-wheel.com/storage/image-product/roue-electrique-swd-150-2-0-0-0.png" width="45%"></img>       |
-| ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| [SWD® Core](https://www.ez-wheel.com/en/safety-gear-motor) <br />Safety gear motor                      | [SWD® 125](https://ez-wheel.com/en/safety-wheel-drive-swd-125) <br /> Medium duty Safety Wheel Drive |[SWD® 150](https://www.ez-wheel.com/en/swd-150-safety-wheel-drive) <br /> Heavy duty Safety Wheel Drive                      | 
+|![SWD-Core](https://www.ez-wheel.com/storage/image-product/visuels-swd-core-2-0-0.png) |![SWD-125](https://www.ez-wheel.com/storage/image-product/ezswd125im-31102023-photo-hd-det.png) |![SWD-150](https://www.ez-wheel.com/storage/image-product/roue-electrique-swd-150-2-0-0-0.png) |![SWD-StarterKit](https://www.ez-wheel.com/storage/image-product/starterkit-ez-wheel-web-0-0-0.png)|
+| ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| [SWD® Core](https://www.ez-wheel.com/en/safety-gear-motor)  | [SWD® 125](https://ez-wheel.com/en/safety-wheel-drive-swd-125) | [SWD® 150](https://www.ez-wheel.com/en/swd-150-safety-wheel-drive) | [SWD® StarterKit](https://www.ez-wheel.com/en/development-kit-for-agv-and-amr) |
+| Safety gear motor                                           | Medium duty Safety Wheel Drive                                 | Heavy duty Safety Wheel Drive                                      | Development kit for AGV and AMR |
 
 Users should regularly inform themselves about updates of this driver (Activating GitHub notifications with 'Watch', 'All activity' button on top of this page).
 
 ## Prerequisites
 
 - SWD® drive
-- Ubuntu 22.04 jammy or Ubuntu 20.04 focal
+- Ubuntu 22.04 (Jammy Jellyfish) or Ubuntu 20.04 (Focal Fossa)
 - dbus-x11
 - CAN bus communication established bewteen the IPC and the SWD® drive
 
