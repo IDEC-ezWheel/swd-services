@@ -34,7 +34,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/ezw/usr/lib
 
 ### Code using ezw-smc-core C++ API
 
-The C++ code 'DiffDriveController.cpp' for [ROS](https://github.com/ezWheelSAS/swd_ros_controllers/blob/main/src/diff_drive_controller/DiffDriveController.cpp) and [ROS2](https://github.com/ezWheelSAS/swd_ros2_controllers/blob/main/src/diff_drive_controller/DiffDriveParameters.cpp), can be used to control a pair of SWD® drives, as a diffrential kinematic platform.
+The C++ code 'DiffDriveController.cpp' for [ROS](https://github.com/IDEC-ezWheel/swd_ros_controllers/blob/main/src/diff_drive_controller/DiffDriveController.cpp) and [ROS2](https://github.com/IDEC-ezWheel/swd_ros2_controllers/blob/main/src/diff_drive_controller/DiffDriveParameters.cpp), can be used to control a pair of SWD® drives, as a diffrential kinematic platform.
 
 ### Code using ezw-smc-service python API
 
@@ -46,7 +46,7 @@ The 'remote.py' python script can be used to control a SWD® drive:
 
 *NOTA: Keyboard commands are listed at the end.*
 
-The 'swd_xxxx_x_commissioning.py' python scripts can be used to [configure a SWD® drive](https://github.com/ezWheelSAS/swd-starter-kit-config):
+The 'swd_xxxx_x_commissioning.py' python scripts can be used to [configure a SWD® drive](https://github.com/IDEC-ezWheel/swd-starter-kit-config):
 
 ```shell
 swd_left_4_commissioning.py
