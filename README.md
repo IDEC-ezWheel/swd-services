@@ -28,3 +28,11 @@ It is available for the following platforms:
 - *ARM 32-bits*, i.e. **armhf** debian packages (only for Ubuntu 20.04 focal), for ARM 32 bits machines
 - *ARM 64-bits*, i.e. **arm64** debian packages, for ARM 64 bits machines, since version 0.2.6
 - *AMD 64-bits*, i.e. **amd64** debian packages, for x86 64 bits machines
+
+## Installation & Usage
+
+Debian package swd-services [installation guide](https://github.com/IDEC-ezWheel/swd-services/blob/main/docs/md/installation.md) and [usage guide](https://github.com/IDEC-ezWheel/swd-services/blob/main/docs/md/usage.md).
+
+## APIs Documentation
+
+API Documentation for [ezw-smc-core](https://github.com/IDEC-ezWheel/swd-services/blob/main/docs/md/ezw-smc-core_api.md) and [ezw-smc-service](https://github.com/IDEC-ezWheel/swd-services/blob/main/docs/md/ezw-smc-service_api.md).
